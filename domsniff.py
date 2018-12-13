@@ -67,7 +67,7 @@ def main(domainlist, interface, regexp):
                 register_name(domainre, dnsmessage.an[0].name)
         except (KeyboardInterrupt, IOError):
             raise
-        except (ValueError, IndexError):
+        except (ValueError, IndexError, dpkt.UnpackError):
             pass
 
 
