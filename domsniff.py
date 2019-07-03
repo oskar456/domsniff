@@ -2,6 +2,7 @@
 # vim: ts=4 expandtab
 
 import re
+import struct
 
 import click
 import pcap
@@ -67,7 +68,7 @@ def main(domainlist, interface, regexp):
                 register_name(domainre, dnsmessage.an[0].name)
         except (KeyboardInterrupt, IOError):
             raise
-        except (ValueError, IndexError, dpkt.UnpackError):
+        except (ValueError, IndexError, dpkt.UnpackError, struct.error):
             pass
 
 

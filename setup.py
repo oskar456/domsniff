@@ -5,7 +5,7 @@ readme = Path(__file__).with_name("README.rst").read_text()
 
 setup(
     name="domsniff",
-    version="0.2",
+    version="0.3",
     description="Passive DNS sniffer for collecting domain names",
     long_description=readme,
     long_description_content_type="text/x-rst",
